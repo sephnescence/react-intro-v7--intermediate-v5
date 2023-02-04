@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Brian doesn't recomment using the below kind of stuff. If you're using tailwind, do it in className, as you'll see in Results.jsx
+*/
+
+/* This can be done if you wanted for some reason. That font sucks hahaha */
+/* @layer base {
+  body {
+    font-family: "Comic Sans MS";
+  }
+} */
+
+@layer components {
+  .search-input {
+    @apply mb-5 block w-60;
+  }
+
+  /* Brian most definitely cautioned against doing this, but he removed all his tailwind stuff when doing lazy loading, so I've just copied these across by hand */
+  .loading-pane {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
+  }
+
+  .loader {
+    font-size: 100px;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@layer utilities {
+  /* You can have this in components as well and it won't complain... So not sure what the distinction between components and utilities is */
+  .greyed-out-disabled {
+    @apply disabled:opacity-30;
+  }
+}
