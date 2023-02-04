@@ -36,3 +36,4 @@ In these tutorials we learned about
 - React testing library
 - Vitest
 - Mocks and Snapshots
+- Suspense
